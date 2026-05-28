@@ -1,0 +1,76 @@
+﻿<Window x:Class="CyberSecurityChatBotAssignment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CyberSecurityChatBotAssignment"
+        mc:Ignorable="d"
+        Title="CyberSecurity Awareness Bot" Height="650" Width="900">
+
+    <Grid>
+
+        <!-- Row Layout -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title and Image Container -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Image -->
+            <Image Grid.Column="0"
+                   Source="/my life.jpg"
+                   Width="120"
+                   Height="120"
+                   Margin="40"
+                   />
+
+            <!-- Title -->
+            <TextBlock Grid.Column="1"
+                       Text="CYBERSECURITY AWARENESS BOT"
+                       FontSize="34"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Margin="40"/>
+        </Grid>
+
+        <!-- Chat Display -->
+        <TextBox x:Name="ChatDisplay"
+                 Grid.Row="1"
+                 Margin="20"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 AcceptsReturn="True"
+                 FontSize="14"/>
+
+        <!-- Bottom Input Area -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Margin="10">
+
+            <!-- User Input -->
+            <TextBox x:Name="UserInput"
+                     Width="600"
+                     Height="35"
+                     FontSize="16"
+                     Margin="0,0,10,0"
+                     KeyDown="UserInput_KeyDown"/>
+
+            <!-- Send Button -->
+            <Button Content="Send"
+                    Width="120"
+                    Height="35"
+                    Click="SendButton_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
