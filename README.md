@@ -18,6 +18,13 @@
  Technologies Used
 - C# / .NET 8.0
 - WPF for UI
+- New commints
+- Changed voice greeting 
+- created a new GUI layout and chatbot interface
+- added MySQL
+- Added Quiz
+- added task manager
+- Improved chatbot response system 
 - System.Media for audio
  Code Structure
 - MainWindow.xaml.cs: UI logic and event handling
